@@ -1,0 +1,92 @@
+.tentangKami-container {
+    max-width: 100vw !important;
+    border-top-right-radius: 2.6vw;
+    border-top-left-radius: 2.6vw;
+    position: relative;
+    margin: -5.21vw 0 0 0;
+    background-color: #F4FFFB;
+    overflow: hidden;
+}
+
+.tentangKami-container .title{
+    text-align: center;
+    margin: 0px 0 1.3vw 0;
+    padding: 5.21vw 0 0 0;
+    color: #008F42;
+}
+
+.tentangKami-container .mid-container {
+    margin:2.6vw 0 0;
+}
+
+.tentangKami-container .top-container,.tentangKami-container .mid-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tentangKami-container .top-container img, .tentangKami-container .mid-container .left-contain{
+    width: 40vw;
+    margin: 0 0 0 8vw;
+    font-size: 1.25vw;
+    text-align: justify;
+}
+
+.tentangKami-container .mid-container h1{
+    text-align: left;
+    background-color: #008F42;
+    width: fit-content;
+    margin: 0 0 1.55vw 0;
+    color: #F4FFFB;
+    padding: 0.5vw 1vw;
+    font-size: 1.66vw;
+    border-radius: 0.5vw;
+}
+
+.tentangKami-container .top-container p, .tentangKami-container .mid-container .right-contain{
+    width: 40vw;
+    font-size: 1.25vw;
+    text-align: justify;
+    margin: 0 8vw 0 0;
+}
+
+.tentangKami-container .mid-container .right-contain ol{
+    margin: 0 0 0 1vw;
+}
+
+@media (max-width: 1000px) {
+    .tentangKami-container {
+        margin: -7vw 0 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .tentangKami-container {
+        margin: -15vw 0 0 0;
+    }
+
+    .tentangKami-container .top-container,.tentangKami-container .mid-container{
+        display: block;
+        justify-content: space-between;
+    }
+    
+    .tentangKami-container .top-container img, .tentangKami-container .mid-container .left-contain,.tentangKami-container .top-container p, .tentangKami-container .mid-container .right-contain{
+        width: 70vw;
+        margin: 2vw auto;
+        font-size: 2.5vw;
+        text-align: justify;
+    }
+
+    .tentangKami-container .top-container img{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .tentangKami-container .mid-container h1{
+        font-size: 2.5vw;
+    }
+    
+    .tentangKami-container .mid-container .right-contain ol{
+        margin: 0 0 0 1vw;
+    }
+}

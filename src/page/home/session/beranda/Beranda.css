@@ -1,0 +1,79 @@
+.beranda-container {
+    max-width : 100vw ;
+    overflow: hidden ;
+}
+
+.beranda-container .image-background{
+    max-width: 100vw ;
+}
+
+.beranda-container .image-background img{
+    width: 100vw;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+.beranda-container .header{
+    position : absolute;
+    text-align: center;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    color: white;
+    width: max-content;
+}
+
+.beranda-container .header-text p{
+    font-size: 2.77vw;
+}
+
+.beranda-container .header-text h1{
+    font-size : 7.22vw;
+}
+
+.beranda-container .header-button .tentangKami{
+    border-style: none !important;
+    background-color:#008F42;
+    padding: 0.5vw 2.6vw;
+    border-radius: 0.5vw;
+    margin: 4.86vw 6.94vw;
+    font-size: 1.4vw;
+    cursor: pointer;
+    color: white;
+    transition: background-color 1s, color 0.3s, transform 0.3s;
+}
+
+.beranda-container .header-button .tentangKami:hover {
+    background-color: white; 
+    color: #008F42;
+    transition: background-color 1s, color 0.3s;
+}
+
+.beranda-container .header-button .produkUnggulan{
+    border-style: none !important;
+    color: #008F42;
+    padding: 0.5vw 2.6vw;
+    border-radius: 0.5vw;
+    margin: 4.86vw 6.94vw;
+    font-size: 1.4vw;
+    cursor: pointer;
+    transition: background-color 1s, color 0.3s, transform 0.3s;
+}
+
+.beranda-container .header-button .produkUnggulan:hover {
+    background-color: #008F42; 
+    color: #fff;
+    transition: background-color 1s, color 0.3s;
+}
+
+@media (max-width: 1000px) {
+    .beranda-container .header{
+        top: 5  0%;
+    }
+}
+
+@media (max-width: 600px) {
+    .beranda-container .header{
+        top: 45%;
+    }
+}

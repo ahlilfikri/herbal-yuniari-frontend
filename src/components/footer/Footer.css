@@ -1,0 +1,157 @@
+.footer-container {
+    background: linear-gradient(180deg, rgba(0, 163, 75, 0.88) 0%, rgba(0, 103, 47, 0.77) 100%);
+    margin: -2vw 0;
+    display: flex;
+    float: left;
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+    padding: 0 0 3vw 0;
+}
+
+.footer-container .left-container {
+    width: 19vw;
+    padding: 3.96vw 0 0 10vw;
+}
+
+.footer-container .left-container .title-footer{
+    width: max-content;
+    font-size: 1.66vw;
+}
+
+.footer-container .left-container li {
+    padding: 0.5vw 0 0 0 ;
+    list-style: none;
+    font-size:1.25vw ;
+}
+
+.footer-container .right-container {
+    padding: 3.96vw 0 0 0;
+    width: 55.54vw;
+    float:left;
+}
+
+.footer-container .right-container h1{
+    font-size: 1.66vw;
+    padding: 0 0 1vw 0.5vw;
+}
+
+.footer-container .right-container p{
+    font-size: 0.9vw;
+    padding: 0 0 0.5vw 0;
+}
+
+.footer-container .right-container input{
+    width: 26.26vw;
+    border-radius: 0.41vw;
+    border-style: none;
+    border:none;
+    outline-style: none;
+    height: 2.91vw;
+    padding: 0 0 0 0.5vw;
+    font-size: 0.83vw;
+}
+
+.footer-container .right-container .nama, .footer-container .right-container .email-class,.footer-container .right-container .subject-class,.footer-container .right-container .pesan-class{
+    float: inline-start;
+    margin:  0.5vw;
+    
+}
+
+.footer-container .right-container .nama{
+    display: flex;
+    justify-content: space-between;
+    width: 26.7vw;
+}
+
+.footer-container .right-container .nama input{
+    width: 12.29vw;
+    font-size: 0.83vw;
+}
+
+.footer-container .right-container button {
+    background-color: black;
+    color: white;
+    font-size: 0.73vw;
+    width: 10.9vw;
+    height:2.76vw;
+    border-radius: 0.41vw;
+    border:none;
+    margin: 1vw 0 0 0.5vw;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        display: block;
+    }
+
+    .footer-container .left-container {
+        width: 100vw;
+        padding: 5vw 0;
+        text-align: center;
+    }
+
+    .footer-container .left-container .title-footer{
+        width: 100vw;
+        font-size:5vw;
+    }
+
+    .footer-container .left-container li {
+        padding: 2vw 0;
+        font-size:2.5vw;
+    }
+
+    .footer-container .right-container {
+        padding: 0;
+        width: 80vw;
+        float:none;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        
+    }
+    
+    .footer-container .right-container h1{
+        font-size: 5vw;
+        padding: 0 0 1vw 0.5vw;
+        text-align: center;
+    }
+    
+    .footer-container .right-container p{
+        font-size: 2vw;
+    }
+    
+    .footer-container .right-container input{
+        width: 70vw;
+        height: 5vw;
+        font-size: 2.5vw;
+    }
+    
+    .footer-container .right-container .nama, .footer-container .right-container .email-class,.footer-container .right-container .subject-class,.footer-container .right-container .pesan-class{
+        float: none;
+        margin:  0 5vw;
+    }
+    
+    .footer-container .right-container .nama{
+        width: 70vw;
+    }
+    
+    .footer-container .right-container .nama input{
+        width: 34.4vw;
+        height: 5vw;
+        font-size: 2.5vw;
+    }
+    
+    .footer-container .right-container button {
+        font-size: 2vw;
+        width: 20vw;
+        height:5vw;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 5vw  0 0 0;
+    }
+
+}
