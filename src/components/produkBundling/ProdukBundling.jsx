@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from 'axios';
-import '../../page/home/session/produk/Produk'
+import '../../page/home/session/produk/Produk';
+import Whatsapp from '../whatsapp/Whatsapp';
 
 const produkBundling = () => {
     const [data, setData] = useState([]);
@@ -35,7 +36,8 @@ const produkBundling = () => {
                                     <li key={item.id}>{itm}</li>
                                 ))}
                                 </ul>
-                                <button>Hubungi Admin</button>
+                                <Whatsapp />
+                                {/* <button>Hubungi Admin</button> */}
                             </div>
                         </div>
                     )
