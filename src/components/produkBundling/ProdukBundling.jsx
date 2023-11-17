@@ -36,8 +36,10 @@ const produkBundling = () => {
                                     <li key={item.id}>{itm}</li>
                                 ))}
                                 </ul>
-                                <Whatsapp />
-                                {/* <button>Hubungi Admin</button> */}
+                                <Whatsapp 
+                                    data ={item.title}
+                                    type ="bundling"
+                                />
                             </div>
                         </div>
                     )

@@ -1,14 +1,16 @@
 // WhatsAppButton.js
 import React from 'react';
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({data,type}) => {
   const openWhatsAppChat = () => {
-    const phoneNumber = '6288210335073'; // Replace with the desired phone number
-    const dynamicData = 'Hello, this is dynamic data!'; // Replace with your dynamic content
-    const message = encodeURIComponent(`Check out this information: ${dynamicData}`);
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    window.open(whatsappLink, '_blank');
+    const phoneNumber = '6288210335073'; 
+    const dynamicData = data;
+    console.log(type);
+    if (type == "bundling"){
+      const message = encodeURIComponent(`Halo permisi saya ingin menanyakan perihal bundling produk : ${dynamicData}`);
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappLink, '_blank');
+    }
   };
 
   return (
