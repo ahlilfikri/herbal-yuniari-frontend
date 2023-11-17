@@ -4,12 +4,11 @@ import './ChooseUs.css'
 
 const ChooseUs = () => {
     const [data, setData] = useState([]);
-    const api = 'http://localhost:3000/chooseUs'; // Use http://localhost
+    const api = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/chooseUs`;
     const getAPI = () => {
         axios.get(api)
             .then(response => {
-                setData(response.data);
-                console.log(response);
+                setData(response.data.data);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -17,8 +16,7 @@ const ChooseUs = () => {
     }
 
     useEffect(() => {
-        console.log(data);
-        getAPI()
+        getAPI();
     }, []);
 
     return (
@@ -26,18 +24,17 @@ const ChooseUs = () => {
             <div className="bottom-container">
                 <h1 className="title-bottom">KENAPA MEMILIH KAMI?</h1>
                 <div className="card-wrapper">
-                    {Array.isArray(data) && data.length > 0 ? (
-                        data.map((item, index) => (
-                            <div className="card" key={index}>
-                                <img src={item.image} alt="" />
+                    {data.map((item, index) => {
+                        const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
+                        return (
+                            <div className="card" key={index} >
+                                <img src={imageSrc} alt="" />
                                 <div className="card-title">
                                     <h1>{item.title}</h1>
                                 </div>
                             </div>
-                        ))
-                    ) : (
-                        <p>No data available</p>
-                    )}
+                        );
+                    })}
                 </div>
             </div>
         </Fragment>

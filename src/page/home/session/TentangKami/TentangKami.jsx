@@ -8,11 +8,11 @@ import './TentangKami.css';
 
 const TentangKami = () => {
     const [data, setData] = useState({});
-    const apiTentangKami = 'http://localhost:3000/tentangKami'; // Use http://localhost
+    const apiTentangKami = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/tentangKami`;
     const getTentangKami = () => {
         axios.get(apiTentangKami)
         .then(response => {
-            setData(response.data[0]);
+            setData(response.data.data[0]);
         })
         .catch(error => {
             console.error('Error fetching data:', error);
