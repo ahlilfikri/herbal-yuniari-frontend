@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from 'axios';
-import './ProdukUnggulan.css'
+import './ProdukUnggulan.css';
+import Card from '../card/style1/CardStyle1';
 
 const produkUnggulan = () => {
     const [data, setData] = useState([]);
@@ -24,17 +25,9 @@ const produkUnggulan = () => {
             <div className="left-contain">
                 <h1>PRODUK UNGGULAN KAMI</h1>
                 <div className="card-wrapper">
-                    {data.map((item, index) => {
-                        const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
-                        return (
-                            <div className="card" key={index}>
-                                <img src={imageSrc} alt=""/>
-                                <div className="card-title">
-                                    <h1>{item.title}</h1>
-                                </div>
-                            </div>
-                        )
-                    })}
+                    {data.map((item, index) => (
+                        <Card key={index} item={item} />
+                    ))}
                 </div>
             </div>
         </Fragment>

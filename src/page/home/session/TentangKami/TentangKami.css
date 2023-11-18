@@ -5,7 +5,7 @@
     position: relative;
     margin: -5.21vw 0 0 0;
     background-color: #F4FFFB;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .tentangKami-container .title{
