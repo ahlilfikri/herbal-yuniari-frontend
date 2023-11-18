@@ -1,6 +1,7 @@
 .produk-container {
     border: none;
     margin: 0;
+    overflow: hidden;
 }
 
 .produk-container .top-container{
