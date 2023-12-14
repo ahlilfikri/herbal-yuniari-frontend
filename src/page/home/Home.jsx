@@ -21,6 +21,7 @@ const Home = () => {
                 <section id="hubungiKami">
                     <Footer />
                 </section>
+                <h1>test</h1>
             </div>
         </Fragment>
     )
