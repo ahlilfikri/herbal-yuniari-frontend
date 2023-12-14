@@ -15,7 +15,7 @@ const ProdukTerlaris = () => {
                 console.error('Error fetching data:', error);
             });
     }
-
+    const coba = 5;
     useEffect(() => {
         getAPI()
     }, []);
