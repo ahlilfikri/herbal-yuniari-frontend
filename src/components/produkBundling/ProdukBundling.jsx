@@ -5,16 +5,14 @@ import Whatsapp from '../whatsapp/Whatsapp';
 
 const produkBundling = () => {
     const [data, setData] = useState([]);
-    const api = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/produkBundling`; // Use http://localhost
-    const getAPI = () => {
-        axios.get(api)
-            .then(response => {
-                setData(response.data.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }
+    const getAPI = async () => {
+        try {
+            const response = await axios.get(import.meta.env.VITE_BASE_URL+"/produkBundling")
+            setData(response.data.data);
+        }catch(error ) {
+            console.error('Error fetching data:', error);
+        };
+      }
 
     useEffect(() => {
         getAPI()
