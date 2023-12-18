@@ -5,15 +5,13 @@ import Card from '../card/style1/CardStyle1';
 
 const ProdukTerlaris = () => {
     const [data, setData] = useState([]);
-    const api = 'http://localhost:2700/produkTerlaris'; // Use http://localhost
-    const getAPI = () => {
-        axios.get(api)
-            .then(response => {
-                setData(response.data.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+    const getAPI = async () => {
+        try {
+            const response = await axios.get(import.meta.env.VITE_BASE_URL+"/produkTerlaris")
+            setData(response.data.data);
+        }catch(error ) {
+            console.error('Error fetching data:', error);
+        };
     }
 
     useEffect(() => {
