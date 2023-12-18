@@ -7,20 +7,15 @@ import Card from "../card/style1/CardStyle1";
 
 const Partner = () => {
   const [data, setData] = useState([]);
-  const api = `${import.meta.env.VITE_BASE_URL.replace(
-    "https",
-    "http"
-  )}/partner`;
 
-  const getAPI = () => {
-    axios.get(api)
-      .then((response) => {
+  const getAPI = async () => {
+    try {
+        const response = await axios.get(import.meta.env.VITE_BASE_URL+"/partner")
         setData(response.data.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  };
+    }catch(error ) {
+        console.error('Error fetching data:', error);
+    };
+}
 
   useEffect(() => {
     getAPI();

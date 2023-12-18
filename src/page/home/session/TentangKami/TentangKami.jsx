@@ -8,18 +8,16 @@ import './TentangKami.css';
 
 const TentangKami = () => {
     const [data, setData] = useState({});
-    const apiTentangKami = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/tentangKami`;
-    const getTentangKami = () => {
-        axios.get(apiTentangKami)
-        .then(response => {
+    const getAPI = async () => {
+        try {
+            const response = await axios.get(import.meta.env.VITE_BASE_URL+"/tentangKami")
             setData(response.data.data[0]);
-        })
-        .catch(error => {
+        }catch(error ) {
             console.error('Error fetching data:', error);
-        });
+        };
     }
     useEffect(() => {
-        getTentangKami()
+        getAPI();
     }, []);
     
     return (

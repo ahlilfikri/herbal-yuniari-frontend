@@ -5,15 +5,14 @@ import Card from '../card/style1/CardStyle1';
 
 const ChooseUs = () => {
     const [data, setData] = useState([]);
-    const api = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/chooseUs`;
-    const getAPI = () => {
-        axios.get(api)
-            .then(response => {
-                setData(response.data.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+    // const api = `${import.meta.env.VITE_BASE_URL.replace("https", "http")}/chooseUs`;
+    const getAPI = async () => {
+        try {
+            const response = await axios.get(import.meta.env.VITE_BASE_URL+"/chooseUs")
+            setData(response.data.data);
+        }catch(error ) {
+            console.error('Error fetching data:', error);
+        };
     }
 
     useEffect(() => {
