@@ -24,7 +24,7 @@ const ProdukTerlaris = () => {
                 <h1>PRODUK TERLARIS BULAN INI</h1>
                 <div className="card-wrapper">
                     {data.map((item, index) => (
-                        <Card key={index} item={item} />
+                        <Card key={index} item={item} link={'produk/:id'} />
                     ))}
                 </div>
             </div>

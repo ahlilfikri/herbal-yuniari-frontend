@@ -7,7 +7,7 @@ const Beranda = () => {
     return (
         <Fragment>
             <div className="beranda-container">
-                <NavBar />
+                <NavBar color='white'/>
                 <div className="header">
                     <div className="header-text">
                         <p>selamat datang di</p>
