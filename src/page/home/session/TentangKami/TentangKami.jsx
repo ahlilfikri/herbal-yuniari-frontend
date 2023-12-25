@@ -1,7 +1,7 @@
 import React, { Fragment,useState,useEffect } from "react";
 import axios from 'axios';
-import ChooseUs from "../../../../components/chooseUs/ChooseUs";
-import Partner from "../../../../components/partner/Partner";
+import ChooseUs from "./component/chooseUs/ChooseUs";
+import Partner from "./component/partner/Partner";
 import './TentangKami.css';
 
 

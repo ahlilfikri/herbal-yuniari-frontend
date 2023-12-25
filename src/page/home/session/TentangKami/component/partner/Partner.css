@@ -1,0 +1,81 @@
+.tentangKami-container .partner-container {
+    background: linear-gradient(180deg, rgba(0, 163, 75, 0.88) 0%, rgba(0, 103, 47, 0.77) 100%);
+    padding: 1vw 0 2.5vw 0;
+}
+
+.tentangKami-container .partner-container .title-partner {
+    color: white;
+    font-size: 1.66vw;
+    padding: 0 0 1.56vw 2.6vw;
+    font-weight: bolder;
+}
+
+.tentangKami-container .partner-container .card-wrapper {
+    overflow-x: hidden;
+}
+
+.tentangKami-container .partner-container .card-wrapper .slick-track {
+    display: flex;
+    height: 10vw;
+}
+
+.tentangKami-container .partner-container .card-wrapper .slick-next,.tentangKami-container .partner-container .card-wrapper .slick-prev {
+    display: none;
+    opacity: 0;
+    position: absolute;
+}
+
+.tentangKami-container .partner-container .card-wrapper .card {
+    background-color: white;
+    width: max-content !important;
+    height: 6.77vw;
+    border-radius: 1vw;
+    transition: transform 0.5s;
+}
+
+.tentangKami-container .partner-container .card-wrapper .card:hover {
+    transform: scale(1.1);
+}
+
+.tentangKami-container .partner-container .card-wrapper .card img {
+    margin: 1vw 0 0 1vw;
+    max-height: 5vw;
+}
+
+.tentangKami-container .partner-container .card-wrapper .card h1 {
+    font-size: 0.83vw;
+    width: 16vw;
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) { 
+    .tentangKami-container .partner-container .title-partner {
+        color: white;
+        font-size: 5vw;
+    }
+
+    .tentangKami-container .partner-container .card-wrapper .slick-track {
+        height: 25vw;
+    }
+    
+    .tentangKami-container .partner-container .card-wrapper .card {
+        background-color: white;
+        width: 60vw;
+        height: 20vw;
+        padding: 5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tentangKami-container .partner-container .card-wrapper .card img {
+        max-height: 15vw;
+        margin-top: -2vw;
+    }
+    
+    .tentangKami-container .partner-container .card-wrapper .card h1 {
+        font-size: 3vw;
+        width: 45vw;
+        margin-top: -2vw;
+    }
+}

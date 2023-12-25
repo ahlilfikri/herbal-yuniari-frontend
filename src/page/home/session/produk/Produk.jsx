@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import ProdukTerlaris from "../../../../components/ProdukTerlaris/ProdukTerlaris";
-import ProdukUnggulan from "../../../../components/produkUnggulan/ProdukUnggulan";
-import ProdukBundling from "../../../../components/produkBundling/ProdukBundling";
+import ProdukTerlaris from "./components/produkTerlaris/ProdukTerlaris";
+import ProdukUnggulan from "./components/produkUnggulan/ProdukUnggulan";
+import ProdukBundling from "./components/produkBundling/ProdukBundling";
 import './Produk.css';
 
 

@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 
 const CardStyle1 = ({ item, link }) => {
   const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
-
+  console.log(link);
   return (
     <Fragment>
       {link ? (
-        <Link to={`/product/${item._id}`}>
-          <div className="card">
+        <div className="card">
+          <Link to={`/product/${item._id}`} style={{textDecoration: 'none'}}>
             <img src={imageSrc} alt="" />
             <div className="card-title">
               <h1>{item.title}</h1>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ) : (
         <div className="card">
           <img src={imageSrc} alt="" />
@@ -24,7 +24,8 @@ const CardStyle1 = ({ item, link }) => {
             <h1>{item.title}</h1>
           </div>
         </div>
-      )}
+      ) 
+      }
     </Fragment>
   );
 };

@@ -1,3 +1,4 @@
-/* .navBar-container .nav-links ul li {
-    color: green !important;
-} */
+.container-single-product h1{
+    font-weight: bolder;
+    color: green;
+}

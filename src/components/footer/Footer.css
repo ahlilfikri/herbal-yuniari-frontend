@@ -1,67 +1,38 @@
 .footer-container {
     background: linear-gradient(180deg, rgba(0, 163, 75, 0.88) 0%, rgba(0, 103, 47, 0.77) 100%);
-    margin: -2vw 0;
-    display: flex;
-    float: left;
     width: 100%;
-    justify-content: space-around;
     color: white;
     padding: 0 0 3vw 0;
     overflow: hidden;
 }
 
 .footer-container .left-container {
-    width: 19vw;
-    padding: 3.96vw 0 0 10vw;
+    padding: 3.96vw 0 0;
 }
 
 .footer-container .left-container .title-footer{
-    width: max-content;
     font-size: 1.66vw;
 }
 
-.footer-container .left-container li {
+.footer-container .left-container a {
+    display: block;
     padding: 0.5vw 0 0 0 ;
+    font-size:1.25vw;
     list-style: none;
-    font-size:1.25vw ;
+    text-decoration: none;
+    color: white;
 }
 
 .footer-container .right-container {
-    padding: 3.96vw 0 0 0;
-    width: 55.54vw;
-    float:left;
+    padding: 3.96vw 0 2vw 0;
 }
 
-
-
-@media (max-width: 600px) {
-    .footer-container {
-        display: block;
-    }
-
-    .footer-container .left-container {
-        width: 100vw;
-        padding: 5vw 0;
-        text-align: center;
-    }
-
+@media (max-width: 767px) {
     .footer-container .left-container .title-footer{
-        width: 100vw;
-        font-size:5vw;
+        font-size: 3.2vw;
     }
-
-    .footer-container .left-container li {
+    .footer-container .left-container a {
         padding: 2vw 0;
         font-size:2.5vw;
-    }
-
-    .footer-container .right-container {
-        padding: 0;
-        width: 80vw;
-        float:none;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        
     }
 }

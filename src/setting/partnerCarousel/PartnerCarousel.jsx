@@ -6,6 +6,7 @@ export const sliderSettings = {
     slidesToScroll: 1,
     autoplay : true,
     autoplaySpeed: 2000,
+    centerPadding : 0,
     responsive: [
         {
             breakpoint: 1024,
